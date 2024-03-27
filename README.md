@@ -4,7 +4,7 @@
 
 ## Code structure
 
-## Hardware instruction
+## Hardware dependencies
 
 ## Usage
 
