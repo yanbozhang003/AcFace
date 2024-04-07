@@ -33,17 +33,23 @@ This section outlines the key components of our codebase and their functionaliti
 
 ### Deep Learning Model
 
-- `RDNet_train_test.py`
+- `RD-Net/RDNet_train_test.py`
   - **Description**: This file serves as the entry point for running the entire training and testing pipeline. It orchestrates the process from data loading to model evaluation, involving initialization of dataset loaders, model instantiation, training, and testing. This file ties all components together, facilitating an end-to-end execution of the RD-Net model.
 
-- `model.py`
+- `RD-Net/model.py`
   - **Description**: This file defines the architecture of RD-Net. It includes the ResidualBlock and RDNet classes, which together construct the backbone of our facial recognition model.
 
-- `train.py`
+- `RD-Net/train.py`
   - **Description**: This file encapsulates the training logic within the Trainer class, including model optimization and loss computation. It manages the training process over multiple epochs, leveraging backpropagation and gradient descent to minimize the loss function. Metrics such as accuracy and loss per batch/epoch are computed and displayed to monitor the training progress. 
 
-- `test.py`
-  - **Description**: This file hosts the Tester class, which oversees the model evaluation on test data. This class is responsible for loading the trained model, executing the forward pass without gradient calculation, and computing key performance metrics such as accuracy, precision, recall, and F1-score. 
+- `RD-Net/test.py`
+  - **Description**: This file hosts the Tester class, which oversees the model evaluation on test data. This class is responsible for loading the trained model, executing the forward pass without gradient calculation, and computing key performance metrics such as accuracy, precision, recall, and F1-score.
+
+- `RD-Net/data_loader.py`
+  - **Description**: This file defines the AudioFaceDataset class, responsible for loading and preprocessing the facial spectrum data. This class facilitates the creation of a dataset ready for input into the neural network, handling tasks such as signal normalization and transformation.
+
+- `RD-Net/RDNet_eva_accuracy.ipynb`
+  - **Description**: This file supports the evaluation of the model training and testing process inside Google Colaboratory environment. It contains the full implementation of RD-Net and integrates the key functions (including data loading, model construction, training and testing) in one Colab notebook. 
 
 ## Hardware dependencies
 
