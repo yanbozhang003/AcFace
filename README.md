@@ -8,7 +8,7 @@ In this repository, we provide a full-stack implementation of the system, compri
 
 ![AcFace system structure.](https://github.com/yanbozhang003/AcFace-AE/blob/main/AcFace_structure.png)
 
-<img src="https://github.com/yanbozhang003/AcFace-AE/blob/main/AcFace_structure.png" alt="Acface system structure" width="1200" height="350"/>
+<img src="https://github.com/yanbozhang003/AcFace-AE/blob/main/AcFace_structure.png" alt="Acface system structure" width="800" height="233"/>
 
 ## Code structure
 
