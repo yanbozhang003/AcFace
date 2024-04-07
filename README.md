@@ -18,21 +18,18 @@ Within this repository, we offer a comprehensive suite of tools required to depl
 
 ## Code structure
 
-This section outlines the key components of our codebase and their functionalities. Our project is structured to ensure easy navigation and comprehension of the acoustic-based facial recognition system's implementation.
+This section outlines the key components of our codebase and their functionalities. The implementations of the two primary components are introduced separately in below.
 
 ### Signal Processing Module
 
-- `RDNet_train_test.py`
-  - **Description**: This file serves as the entry point for running the entire training and testing pipeline. It orchestrates the process from data loading to model evaluation, involving initialization of dataset loaders, model instantiation, training, and testing. This file ties all components together, facilitating an end-to-end execution of the RD-Net model.
+- `get_tx_signal.m`
+  - **Description**: This file generates acoustic signal for facial scanning. It allows defining the scanning signal by considering various parameters including duration, cycles, bandwidth, center frequency, etc.
 
-- `model.py`
-  - **Description**: This file defines the architecture of RD-Net. It includes the ResidualBlock and RDNet classes, which together construct the backbone of our facial recognition model.
+- `get_rx_signal.m`
+  - **Description**: This file connects the MINIDSP UMA-16 acoustic array to a PC to collect the facial reflected acoustic samples. It sets up a convenient method for data collection by leveraging MATLAB communication toolbox.  
 
-- `train.py`
-  - **Description**: This file encapsulates the training logic within the Trainer class, including model optimization and loss computation. It manages the training process over multiple epochs, leveraging backpropagation and gradient descent to minimize the loss function. Metrics such as accuracy and loss per batch/epoch are computed and displayed to monitor the training progress. 
-
-- `test.py`
-  - **Description**: This file hosts the Tester class, which oversees the model evaluation on test data. This class is responsible for loading the trained model, executing the forward pass without gradient calculation, and computing key performance metrics such as accuracy, precision, recall, and F1-score. 
+- `start_pcoc.m`
+  - **Description**: This file starts the processing flow for deriving facial spectrum. It takes in raw acoustic samples as input, together with multiple paramters that are defined by the actual hardware configurations and experiment settings, then starts signal processing flow including cir derivation and multipath recombining. It finally outputs the facial spectrums that characterizes the facial features of certain users. 
 
 ### Deep Learning Model
 
