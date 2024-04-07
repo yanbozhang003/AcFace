@@ -1,7 +1,5 @@
 # AcFace
 
-## Introduction of this project
-
 This project introduces a novel acoustic-based facial recognition system designed to deliver exceptional performance even under conditions where facial masks obscure parts of the face. The system is built around two primary components:
 
 1. **Signal Processing Module**: This module processes raw acoustic signals to create precise 3D representations of faces. It is engineered to accurately capture facial features, ensuring the system's effectiveness even when traditional visual cues are partially hidden.
