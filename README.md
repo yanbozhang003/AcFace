@@ -16,8 +16,27 @@ The diagram below offers a visual overview of the system's architecture.
 
 Within this repository, we offer a comprehensive suite of tools required to deploy this system, including the signal processing algorithms essential for extracting facial spectrums and the deep learning framework for spectrum analysis and recognition. Furthermore, we have included a specially curated dataset to facilitate the evaluation of the system's performance across a diverse range of scenarios.
 
-
 ## Code structure
+
+This section outlines the key components of our codebase and their functionalities. Our project is structured to ensure easy navigation and comprehension of the acoustic-based facial recognition system's implementation.
+
+### Key Components
+
+- `signal_processor.py`
+  - **Description**: This module handles the processing of raw acoustic signals to generate 3D facial representations. It includes algorithms for signal analysis and feature extraction that are crucial for accurate face modeling, especially under obscured conditions.
+
+- `deep_learning_model.py`
+  - **Description**: Implements the deep learning framework for facial recognition. It is designed to interpret the 3D facial representations and perform the recognition process, leveraging advanced neural network techniques to ensure high accuracy.
+
+- `dataset_loader.py`
+  - **Description**: Responsible for loading and preprocessing the self-constructed dataset. It formats the data suitably for use with the signal processing module and the deep learning model, facilitating effective training and evaluation.
+
+- `evaluation_metrics.py`
+  - **Description**: Contains functions to evaluate the system's performance. This includes various metrics to assess accuracy, precision, and recall, providing insights into the system's effectiveness across different scenarios.
+
+- `main.py`
+  - **Description**: The entry point of the application. Orchestrates the workflow by integrating all modules, from processing the acoustic signals to performing facial recognition and outputting the results.
+
 
 ## Hardware dependencies
 
