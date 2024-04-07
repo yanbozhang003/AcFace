@@ -20,7 +20,21 @@ Within this repository, we offer a comprehensive suite of tools required to depl
 
 This section outlines the key components of our codebase and their functionalities. Our project is structured to ensure easy navigation and comprehension of the acoustic-based facial recognition system's implementation.
 
-### Key Components
+### Signal Processing Module
+
+- `RDNet_train_test.py`
+  - **Description**: This file serves as the entry point for running the entire training and testing pipeline. It orchestrates the process from data loading to model evaluation, involving initialization of dataset loaders, model instantiation, training, and testing. This file ties all components together, facilitating an end-to-end execution of the RD-Net model.
+
+- `model.py`
+  - **Description**: This file defines the architecture of RD-Net. It includes the ResidualBlock and RDNet classes, which together construct the backbone of our facial recognition model.
+
+- `train.py`
+  - **Description**: This file encapsulates the training logic within the Trainer class, including model optimization and loss computation. It manages the training process over multiple epochs, leveraging backpropagation and gradient descent to minimize the loss function. Metrics such as accuracy and loss per batch/epoch are computed and displayed to monitor the training progress. 
+
+- `test.py`
+  - **Description**: This file hosts the Tester class, which oversees the model evaluation on test data. This class is responsible for loading the trained model, executing the forward pass without gradient calculation, and computing key performance metrics such as accuracy, precision, recall, and F1-score. 
+
+### Deep Learning Model
 
 - `RDNet_train_test.py`
   - **Description**: This file serves as the entry point for running the entire training and testing pipeline. It orchestrates the process from data loading to model evaluation, involving initialization of dataset loaders, model instantiation, training, and testing. This file ties all components together, facilitating an end-to-end execution of the RD-Net model.
