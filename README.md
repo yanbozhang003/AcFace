@@ -22,13 +22,13 @@ This section outlines the key components of our codebase and their functionaliti
 
 ### Signal Processing Module
 
-- `get_tx_signal.m`
+- `Spectrum derivation/get_tx_signal.m`
   - **Description**: This file generates acoustic signal for facial scanning. It allows defining the scanning signal by considering various parameters including duration, cycles, bandwidth, center frequency, etc.
 
-- `get_rx_signal.m`
+- `Spectrum derivation/get_rx_signal.m`
   - **Description**: This file connects the MINIDSP UMA-16 acoustic array to a PC to collect the facial reflected acoustic samples. It sets up a convenient method for data collection by leveraging MATLAB communication toolbox.  
 
-- `start_pcoc.m`
+- `Spectrum derivation/start_pcoc.m`
   - **Description**: This file starts the processing flow for deriving facial spectrum. It takes in raw acoustic samples as input, together with multiple paramters that are defined by the actual hardware configurations and experiment settings, then starts signal processing flow including cir derivation and multipath recombining. It finally outputs the facial spectrums that characterizes the facial features of certain users. 
 
 ### Deep Learning Model
