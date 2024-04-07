@@ -10,6 +10,10 @@ In this repository, we provide a full-stack implementation of the system, compri
 
 <img src="https://github.com/yanbozhang003/AcFace-AE/blob/main/AcFace_structure.png" alt="Acface system structure" width="800" height="275"/>
 
+<div style="text-align: center;">
+    <img src="https://github.com/yanbozhang003/AcFace-AE/blob/main/AcFace_structure.png" alt="Acface system structure" width="300" height="200"/>
+</div>
+
 ## Code structure
 
 ## Hardware dependencies
