@@ -14,7 +14,7 @@ The diagram below offers a visual overview of the system's architecture.
 
 Within this repository, we offer a comprehensive suite of tools required to deploy this system, including the signal processing algorithms essential for extracting facial spectrums and the deep learning framework for spectrum analysis and recognition. Furthermore, we have included a specially curated dataset to facilitate the evaluation of the system's performance across a diverse range of scenarios.
 
-## Code structure
+## Code overview
 
 This section outlines the key components of our codebase and their functionalities. The implementations of the two primary components are introduced separately in below.
 
