@@ -22,21 +22,17 @@ This section outlines the key components of our codebase and their functionaliti
 
 ### Key Components
 
-- `signal_processor.py`
-  - **Description**: This module handles the processing of raw acoustic signals to generate 3D facial representations. It includes algorithms for signal analysis and feature extraction that are crucial for accurate face modeling, especially under obscured conditions.
+- `RDNet_train_test.py`
+  - **Description**: This file serves as the entry point for running the entire training and testing pipeline. It orchestrates the process from data loading to model evaluation, involving initialization of dataset loaders, model instantiation, training, and testing. This file ties all components together, facilitating an end-to-end execution of the RD-Net model.
 
-- `deep_learning_model.py`
-  - **Description**: Implements the deep learning framework for facial recognition. It is designed to interpret the 3D facial representations and perform the recognition process, leveraging advanced neural network techniques to ensure high accuracy.
+- `model.py`
+  - **Description**: This file defines the architecture of RD-Net. It includes the ResidualBlock and RDNet classes, which together construct the backbone of our facial recognition model.
 
-- `dataset_loader.py`
-  - **Description**: Responsible for loading and preprocessing the self-constructed dataset. It formats the data suitably for use with the signal processing module and the deep learning model, facilitating effective training and evaluation.
+- `train.py`
+  - **Description**: This file encapsulates the training logic within the Trainer class, including model optimization and loss computation. It manages the training process over multiple epochs, leveraging backpropagation and gradient descent to minimize the loss function. Metrics such as accuracy and loss per batch/epoch are computed and displayed to monitor the training progress. 
 
-- `evaluation_metrics.py`
-  - **Description**: Contains functions to evaluate the system's performance. This includes various metrics to assess accuracy, precision, and recall, providing insights into the system's effectiveness across different scenarios.
-
-- `main.py`
-  - **Description**: The entry point of the application. Orchestrates the workflow by integrating all modules, from processing the acoustic signals to performing facial recognition and outputting the results.
-
+- `test.py`
+  - **Description**: This file hosts the Tester class, which oversees the model evaluation on test data. This class is responsible for loading the trained model, executing the forward pass without gradient calculation, and computing key performance metrics such as accuracy, precision, recall, and F1-score. 
 
 ## Hardware dependencies
 
