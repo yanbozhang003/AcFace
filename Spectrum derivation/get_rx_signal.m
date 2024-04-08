@@ -3,20 +3,25 @@ close all
 
 filename = 'Rx_file'
 
-deviceReader = audioDeviceReader('Device','nanoSHARC micArray16 UAC2.0 ',...
-    'SampleRate',48000,...
-    'NumChannels',16,...
+Device = 'nanoSHARC micArray16 UAC2.0'
+Rx_duration = 5
+Fs = 48000
+NumCh = 16
+
+deviceReader = audioDeviceReader('Device', Device,...
+    'SampleRate',Fs,...
+    'NumChannels',NumCh,...
     'OutputDataType','double',...
     'BitDepth','24-bit integer');
 setup(deviceReader)
 
 fileWriter = dsp.AudioFileWriter([filename,'.wav'],'FileFormat','WAV','DataType','double',...
-    'SampleRate',48000);
+    'SampleRate',Fs);
 
 disp('Recording starts now');
 
 tic
-while toc < 5
+while toc < Rx_duration
     acquireAudio = deviceReader();
     fileWriter(acquireAudio);
 end
@@ -29,7 +34,7 @@ release(fileWriter)
 %%
 [data,Fs] = audioread([filename,'.wav']);
 
-for i = 1:16
+for i = 1:NumCh
     plot(data(:,i));
     ylim([-0.2 0.2])
     title(['i: ', num2str(i)]);
