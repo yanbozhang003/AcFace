@@ -124,7 +124,35 @@ Options:
     -m <MASK>              Specify the mask indicator, "1" means with mask, "0" means without mask.
 ```
 
-### RD-Net training and testing
+### RD-Net processing
+
+Last but not least, RD-Net serves the purpose of accurate and robust facial spectrum recognition. The core of RD-Net is a recognizer-discriminator design, which is optimized for maximal recognition accuracy and minimized mask distinguishing capabiilty. 
+
+The training process can be started by executing the following command:
+
+```
+./model_train.sh -d <data folder> -b <batch size> -l <learning rate> -e <num epochs> -m <model folder>
+```
+
+The options for this command are detailed below:
+
+``` 
+Options:
+    -d <data folder>       Specify the directory for data. Default is "./data". 
+    -b <batch size>        Specify the batch size. Default is 32.
+    -l <learning rate>     Specify the learning rate. Default is 0.001.
+    -e <num epochs>        Specify the number of epochs. Default is 30.
+    -m <model path>        Specify the path for model saving. Default is "./model.pth"
+```
+
+After training completes, you can start model testing by executing the following command:
+
+```
+./model_test.sh -d <data folder> -m <model path>
+```
+
+The definition of these two arguments is the same as they are in `model_train.sh`. 
+
 
 #### Training
 
