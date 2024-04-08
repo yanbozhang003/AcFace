@@ -48,6 +48,11 @@ This section outlines the key components of our codebase and their functionaliti
     - Schematic: https://www.minidsp.com/images/UMA-16_Lite_rev-a_2022y01m05d_1500%20(1).zip
     - Driver installation: https://www.minidsp.com/userdownloads/usb-mic-array-series
 
+- The speaker used in this project is the Grove speaker that is designed by Seeed studio. The speaker is drived by Raspeberry Pi for audio control. Useful links are listed in below:
+      - Seeed studio grove-speaker: https://wiki.seeedstudio.com/Grove-Speaker/
+      - Schematic: https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_v1.0_sch.pdf
+      - Driver installation: https://github.com/HinTak/seeed-voicecard
+
 - The execution of facial spectrum derivation requires MATLAB and the following toolbox software to be installed: Signal Processing Toolbox, DSP System Toolbox, Mapping Toolbox, and Image Processing Toolbox. During code execution, you may encounter prompts asking for the installation of any missing toolboxes.
 
   The implementation of RD-Net utilizes Python 3.10.12 and PyTorch 2.2.1+cu121. Additionally, several additional software packages are necessary, including scipy, numpy, pandas, pathlib, drive, time, and sklearn.
