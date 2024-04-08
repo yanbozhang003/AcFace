@@ -63,8 +63,11 @@ Using the AcFace framework for face recognition requires executing three main mo
 ### Facial scanning
 As the first step, facial scanning controls the grove-speaker for signal transmitting, and connects to the UMA-16 microphone array for signal receiving. 
 
-First, to start the UMA-16 to stand-by, execute this script: 
-``` matlab -batch "audioRecorder('filename', 'MyRecording', 'Device', 'MyDevice', 'Rx_duration', 10, 'Fs', 44100, 'NumCh', 8)" ```
+First, to start the UMA-16 to stand-by, execute this command: 
+
+``` matlab -batch "audioRecorder('filename', <FILENAME>, 'Device', <DEVICE>, 'Rx_duration', <RX_TIME>, 'Fs', <FS>, 'NumCh', <NUMCH>)" ```
+
+
 
 ### Facial spectrum derivation
 
