@@ -84,6 +84,7 @@ With UMA-16 standing by, you can start transmitting the acoustic signal for faci
 The speaker control uses command provided by seeed-voicecard. Install it from [here](https://github.com/HinTak/seeed-voicecard). 
 
 After accessing RPI, execute the following command:
+
 ```aplay -D <device> -r <sample rate> <filename>```
 
 Below is how the options are defined:
