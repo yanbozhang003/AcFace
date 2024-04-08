@@ -71,11 +71,11 @@ Below is how the options are defined:
 
 ``` 
 Options:
-    -f <filename>    Specify the path and filename for the recording. Default is 'Rx_file'.
-    -d <device>      Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
-    -r <duration>    Specify the recording duration in seconds. Default is 5.
-    -s <sample rate> Specify the sample rate in Hz. Default is 48000.
-    -n <num channels> Specify the number of channels. Default is 16.
+    -f <filename>           Specify the path and filename for the recording. Default is 'Rx_file'.
+    -d <device>             Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
+    -r <duration>           Specify the recording duration in seconds. Default is 5.
+    -s <sample rate>        Specify the sample rate in Hz. Default is 48000.
+    -n <num channels>       Specify the number of channels. Default is 16.
 ```
 
 You can use ```-h``` option to check out the definition of the options. 
