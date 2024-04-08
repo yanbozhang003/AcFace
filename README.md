@@ -97,9 +97,12 @@ aplay -D <device> -r <sample rate> <filename>
 
 The options for this command are detailed below:
 
-- `-D <device>`: Specifies the device name. The default value is 'plughw:1,0'.
-- `-r <sample rate>`: Specifies the sample rate in Hz. The default value is 48000.
-- `<filename>`: Specifies the path and filename for storing the audio file.
+``` 
+Options:
+    -D <device>             Specify the device name. Default is 'plughw:1,0'.
+    -r <sample rate>        Specify the sample rate in Hz. Default is 48000.
+    <filename>              Specify the path and filename for storing the audio file.
+```
 
 ### Facial spectrum derivation
 
