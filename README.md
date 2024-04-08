@@ -153,4 +153,9 @@ After training completes, you can start model testing by executing the following
 
 The definition of these two arguments is the same as they are in `model_train.sh`. 
 
+## Citation
+
+## Contact
+zhang.yanbo@ntu.edu.sg
+yanbozhang03@gmail.com
 
