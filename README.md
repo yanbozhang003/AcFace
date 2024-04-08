@@ -106,6 +106,24 @@ Options:
 
 ### Facial spectrum derivation
 
+This module processes the received raw samples and derives facial spectrums. 
+
+To start the processing, execute:
+
+```
+./startFsProc.sh -s ./settings/ -g ./signal/ -u user1 -m 0
+```
+
+The options for this command are detailed below:
+
+``` 
+Options:
+    -s <settings_folder>   Specify the settings folder path. Default is "./settings/".
+    -g <signal_folder>     Specify the signal folder path. Default is "./signal/".
+    -u <USER>              Specify the user index, e.g., "user1".
+    -m <MASK>              Specify the mask indicator, "1" means with mask, "0" means without mask.
+```
+
 ### RD-Net training and testing
 
 #### Training
