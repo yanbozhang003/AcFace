@@ -1,9 +1,8 @@
-function fs_final = z_get_spec_final(rx_trace_list)
+function fs_final = z_get_spec_final(rx_trace_list,raw_data_dir)
     %%
     params_folder = './params/';
     settings_folder = './settings/';
-    raw_data_dir = './rx_sig/';
-      
+ 
     config = load([settings_folder,'config.mat']).config;
     setting_params = load([settings_folder,'settings.mat']).setting;
     signal_config = load([params_folder,'signal.mat']).signal;

@@ -8,6 +8,8 @@ addpath(function_folder)
 settings_folder = './settings/';
 [config,setting] = z_load_config(settings_folder);
 
+signal_folder ='./rx_sig/'
+
 MASK_ALL = config.mask;
 DISTANCE_ALL = config.distance;
 USER_ALL = config.user_all;
@@ -21,7 +23,7 @@ MASK = 1;
 rx_trace_list = z_get_trace(USER,USER_ALL,MASK,MASK_ALL,DISTANCE_ALL,config);
 
 %% get spectrum
-facial_spec_all = z_get_spec_final(rx_trace_list);
+facial_spec_all = z_get_spec_final(rx_trace_list,signal_folder);
 
 %% plot spectrum
 plt_filter = fspecial('gaussian',[10,10],2);
