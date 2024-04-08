@@ -80,6 +80,21 @@ Options:
 
 You can use ```-h``` option to check out the definition of the options. 
 
+With UMA-16 standing by, you can start transmitting the acoustic signal for facial scanning. 
+The speaker control uses command provided by seeed-voicecard. Install it from [here](https://github.com/HinTak/seeed-voicecard). 
+
+After accessing RPI, execute the following command:
+```aplay -D <device> -r <sample rate> <filename>```
+
+Below is how the options are defined:
+
+``` 
+Options:
+    -D <device>             Specify the device name. Default is 'plughw:1,0'.
+    -r <sample rate>        Specify the sample rate in Hz. Default is 48000.
+    <filename>              Specify the path and filename for storing the audio file.
+```
+
 ### Facial spectrum derivation
 
 ### RD-Net training and testing
