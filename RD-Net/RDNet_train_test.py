@@ -66,7 +66,7 @@ if __name__ == '__main__':
     parser.add_argument('--data_dir', type=str, default='./data', help='Directory for data')
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size for training')
     parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for training')
-    parser.add_argument('--training_epochs', type=int, default=10, help='Number of training epochs')
+    parser.add_argument('--training_epochs', type=int, default=30, help='Number of training epochs')
     parser.add_argument('--save_model', type=str, default='./model.pth', help='Path to save the trained model', required=False)
     parser.add_argument('--model_path', type=str, help='Path to load the model for testing', required=False)
     args = parser.parse_args()

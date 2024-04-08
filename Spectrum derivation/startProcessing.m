@@ -2,9 +2,7 @@ function startProcessing(settings_folder, signal_folder, USER, MASK)
     clear;
     close all;
 
-    %% load configurations, parameters, functions
-    function_folder = './functions/';
-    addpath(function_folder);
+    disp settings_folder
 
     [config, setting] = z_load_config(settings_folder);
 

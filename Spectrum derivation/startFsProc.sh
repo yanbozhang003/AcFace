@@ -1,9 +1,9 @@
 #!/bin/bash
 
 SETTINGS_FOLDER="./settings/"
-SIGNAL_FOLDER="./signal/"
-USER="default_user"
-MASK="1"
+SIGNAL_FOLDER="./rx_sig/"
+USER="user1"
+MASK="0"
 
 function usage() {
     echo "Usage: $0 -s <settings_folder> -g <signal_folder> -u <USER> -m <MASK>"
@@ -46,4 +46,4 @@ while getopts ":s:g:u:m:h" opt; do
     esac
 done
 
-matlab -batch "processData('$SETTINGS_FOLDER', '$SIGNAL_FOLDER', '$USER', '$MASK')"
+matlab -batch "startProcessing('$SETTINGS_FOLDER', '$SIGNAL_FOLDER', '$USER', '$MASK')"
