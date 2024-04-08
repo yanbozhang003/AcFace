@@ -65,7 +65,7 @@ As the first step, facial scanning controls the grove-speaker for signal transmi
 
 First, to start the UMA-16 to stand-by, execute this command: 
 
-``` ./startAudioRecorder.sh -f <FILENAME> -d <DEVICE> -r <RX_TIME> -s <FS> -n <NUM_CH> ```
+``` ./startAudioRecorder.sh -f <filename> -d <device> -r <duration> -s <sample rates> -n <num channels> ```
 
 Below is how the options are defined:
 
