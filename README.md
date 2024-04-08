@@ -60,41 +60,43 @@ This section outlines the key components of our codebase and their functionaliti
 
 Using the AcFace framework for face recognition requires executing three main modules: Facial scanning, Facial spectrum derivation, and RD-Net processing (including training and testing). Below, we will introduce the operational methods of these three modules in three parts.
 
-### Facial scanning
-As the first step, facial scanning controls the grove-speaker for signal transmitting, and connects to the UMA-16 microphone array for signal receiving. 
+### Facial Scanning
 
-First, to start the UMA-16 to stand-by, execute this command: 
+Facial scanning is the initial step in our process. It involves controlling the grove-speaker to transmit signals and utilizing the UMA-16 microphone array to receive signals.
 
-``` ./startAudioRecorder.sh -f <filename> -d <device> -r <duration> -s <sample rates> -n <num channels> ```
+#### Starting the UMA-16
 
-Below is how the options are defined:
+To prepare the UMA-16 for operation, use the following command to set it to standby mode:
 
-``` 
-Options:
-    -f <filename>           Specify the path and filename for the recording. Default is 'Rx_file'.
-    -d <device>             Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
-    -r <duration>           Specify the recording duration in seconds. Default is 5.
-    -s <sample rate>        Specify the sample rate in Hz. Default is 48000.
-    -n <num channels>       Specify the number of channels. Default is 16.
+```bash
+./startAudioRecorder.sh -f <filename> -d <device> -r <duration> -s <sample rate> -n <num channels>
 ```
 
-You can use ```-h``` option to check out the definition of the options. 
+The options for this command are defined as follows:
 
-With UMA-16 standing by, you can start transmitting the acoustic signal for facial scanning. 
-The speaker control uses command provided by seeed-voicecard. Install it from [here](https://github.com/HinTak/seeed-voicecard). 
+- `-f <filename>`: Specifies the path and filename for the recording. The default value is 'Rx_file'.
+- `-d <device>`: Specifies the device name. The default value is 'nanoSHARC micArray16 UAC2.0'.
+- `-r <duration>`: Specifies the recording duration in seconds. The default value is 5.
+- `-s <sample rate>`: Specifies the sample rate in Hz. The default value is 48000.
+- `-n <num channels>`: Specifies the number of channels. The default value is 16.
 
-After accessing RPI, execute the following command:
+Use the `-h` option to view the definitions of these options.
 
-```aplay -D <device> -r <sample rate> <filename>```
+#### Transmitting the Acoustic Signal
 
-Below is how the options are defined:
+With the UMA-16 ready, begin transmitting the acoustic signal necessary for facial scanning. Control of the speaker is managed through commands provided by the seeed-voicecard. The seeed-voicecard can be installed from [this GitHub repository](https://github.com/HinTak/seeed-voicecard).
 
-``` 
-Options:
-    -D <device>             Specify the device name. Default is 'plughw:1,0'.
-    -r <sample rate>        Specify the sample rate in Hz. Default is 48000.
-    <filename>              Specify the path and filename for storing the audio file.
+After setting up on an RPI (Raspberry Pi), use the following command to play the audio file:
+
+```bash
+aplay -D <device> -r <sample rate> <filename>
 ```
+
+The options for this command are detailed below:
+
+- `-D <device>`: Specifies the device name. The default value is 'plughw:1,0'.
+- `-r <sample rate>`: Specifies the sample rate in Hz. The default value is 48000.
+- `<filename>`: Specifies the path and filename for storing the audio file.
 
 ### Facial spectrum derivation
 
