@@ -74,11 +74,14 @@ To prepare the UMA-16 for operation, use the following command to set it to stan
 
 The options for this command are defined as follows:
 
-- `-f <filename>`: Specifies the path and filename for the recording. The default value is 'Rx_file'.
-- `-d <device>`: Specifies the device name. The default value is 'nanoSHARC micArray16 UAC2.0'.
-- `-r <duration>`: Specifies the recording duration in seconds. The default value is 5.
-- `-s <sample rate>`: Specifies the sample rate in Hz. The default value is 48000.
-- `-n <num channels>`: Specifies the number of channels. The default value is 16.
+``` 
+Options:
+    -f <filename>           Specify the path and filename for the recording. Default is 'Rx_file'.
+    -d <device>             Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
+    -r <duration>           Specify the recording duration in seconds. Default is 5.
+    -s <sample rate>        Specify the sample rate in Hz. Default is 48000.
+    -n <num channels>       Specify the number of channels. Default is 16.
+```
 
 Use the `-h` option to view the definitions of these options.
 
