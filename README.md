@@ -38,9 +38,7 @@ This section outlines the key components of our codebase and their functionaliti
 
 - `RD-Net/data_loader.py:` This file defines the AudioFaceDataset class, responsible for loading and preprocessing the facial spectrum data. This class facilitates the creation of a dataset ready for input into the neural network, handling tasks such as signal normalization and transformation.
 
-- `RD-Net/Eva_scripts/:` This folder contains Colab scripts that evaluate the performance of RD-Net from different aspects, including:
-    - `RDNet_eva_accuracy.ipynb:` This file validates the performance of RD-Net at three environments (with varied noise levels and ambient dynamics).
-    - `RDNet_eva_scalability.ipynb:` This file verifies the scalability of RD-Net by applying the model for inferencing of increasing number of users. 
+- `RD-Net/Eva_scripts/:` This folder contains Colab scripts that evaluate the performance of RD-Net from different aspects, including the robustness at different environments, scalability to increased number of users, accuracy when using varied number of microphones, impact of the discriminators' weightings, training and inferencing computational cost, etc.
 
 ## Hardware dependencies
 
