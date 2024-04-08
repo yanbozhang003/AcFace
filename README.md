@@ -67,7 +67,15 @@ First, to start the UMA-16 to stand-by, execute this command:
 
 ``` ./startAudioRecorder.sh -f <FILENAME> -d <DEVICE> -r <RX_TIME> -s <FS> -n <NUM_CH> ```
 
+Below is how the options are defined:
 
+``` 
+Options:
+    - -f <filename>    Specify the path and filename for the recording. Default is 'Rx_file'.
+    - -d <device>      Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
+```
+
+You may use ```-h``` option to check out the definition of the options. 
 
 ### Facial spectrum derivation
 
