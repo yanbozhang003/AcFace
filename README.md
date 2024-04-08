@@ -65,7 +65,7 @@ As the first step, facial scanning controls the grove-speaker for signal transmi
 
 First, to start the UMA-16 to stand-by, execute this command: 
 
-``` matlab -batch "audioRecorder('filename', <FILENAME>, 'Device', <DEVICE>, 'Rx_duration', <RX_TIME>, 'Fs', <FS>, 'NumCh', <NUMCH>)" ```
+``` ./startAudioRecorder.sh -f <FILENAME> -d <DEVICE> -r <RX_TIME> -s <FS> -n <NUM_CH> ```
 
 
 
