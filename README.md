@@ -71,8 +71,8 @@ Below is how the options are defined:
 
 ``` 
 Options:
-    - -f <filename>    Specify the path and filename for the recording. Default is 'Rx_file'.
-    - -d <device>      Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
+    -f <filename>    Specify the path and filename for the recording. Default is 'Rx_file'.
+    -d <device>      Specify the device name. Default is 'nanoSHARC micArray16 UAC2.0'.
 ```
 
 You may use ```-h``` option to check out the definition of the options. 
