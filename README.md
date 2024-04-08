@@ -106,7 +106,7 @@ Options:
 
 ### Facial spectrum derivation
 
-This module processes the received raw samples and derives facial spectrums. 
+This module processes the received raw samples and derives facial spectrums. It takes in the raw signal and experimental settings (define the settings under `./settings/` ) as the input, and calls multiple functions for facial spectrum derivation. 
 
 To start the processing, execute:
 
