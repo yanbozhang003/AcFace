@@ -40,14 +40,15 @@ This section outlines the key components of our codebase and their functionaliti
 
 - `RD-Net/Eva_scripts/:` This folder contains Colab scripts that evaluate the performance of RD-Net from different aspects, including the robustness at different environments, scalability to increased number of users, accuracy of using varied number of microphones, impact of the discriminators' weightings, training and inferencing computational cost, etc.
 
-## Hardware dependencies
+## Hardware and software dependencies
 
 - The spectrum derivation technique requires the support from multi-channel microphone arrays. The hardware model used in this project is the UMA-16(v2) USB mic array which is manufactured by miniDSP company. This device contains sixteen microphone channels, which are arranged as a 4-by-4 uniform rectangular array. The captured raw samples are delivered to a PC through plug&play USB audio connectivity. The distance between adjacent microphone element is 44mm and the array spans the area of 132mm x 132mm. Useful links regarding this device is introduced in below:
     - Specification: https://www.minidsp.com/products/usb-audio-interface/uma-16-microphone-array
     - User manual: https://www.minidsp.com/images/documents/UMA-16%20v2%20User%20Manual.pdf
     - Schematic: https://www.minidsp.com/images/UMA-16_Lite_rev-a_2022y01m05d_1500%20(1).zip
     - Driver installation: https://www.minidsp.com/userdownloads/usb-mic-array-series
-- 
+
+- The execution of facial spectrum derivation requires MATLAB and the following toolbox software to be installed: Signal Processing Toolbox, DSP System Toolbox, Mapping Toolbox, and Image Processing Toolbox. During code execution, you may encounter prompts asking for the installation of any missing toolboxes. The implementation of RD-Net utilizes Python 3.10.12 and PyTorch 2.2.1+cu121. Additionally, several additional software packages are necessary, including scipy, numpy, pandas, pathlib, drive, time, and sklearn.
 
 ## Usage
 
