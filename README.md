@@ -154,16 +154,3 @@ After training completes, you can start model testing by executing the following
 The definition of these two arguments is the same as they are in `model_train.sh`. 
 
 
-#### Training
-
-#### Evaluation
-
-##### Accuracy, Precision, Recall, F1-score
-
-##### Scalability
-
-##### Efficiency
-
-##### Parameter settings
-
-
