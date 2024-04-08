@@ -4,13 +4,14 @@ import numpy as np
 from sklearn.metrics import precision_score, recall_score, f1_score
 
 class Tester:
-    def __init__(self, model, data_loader, device):
+    def __init__(self, model, data_loader, device, args):
         self.model = model
         self.data_loader = data_loader
         self.device = device
+        self.args = args
 
-    def test(self, model_load_path='./drive/MyDrive/AcFace_AE/RD-Net/Model/model_pretrained.pth'):
-        self.model.load_state_dict(torch.load(model_load_path))
+    def test(self):
+        self.model.load_state_dict(torch.load(self.args.model_path))
         self.model.eval()
 
         acc_list = []

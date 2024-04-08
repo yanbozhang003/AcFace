@@ -9,12 +9,14 @@ import pandas as pd
 from pathlib import Path
 from torch.utils.data import Dataset, DataLoader
 
+import argparse
+
 from data_loader import AudioFaceDataset
 from models import RDNet
 from train import Trainer
 from test import Tester
 
-def main():
+def main(args):
     # Preparing GPU
     torch.cuda.is_available()
     n_gpu = torch.cuda.device_count()
@@ -28,11 +30,10 @@ def main():
     print("total GPU memory: ", t, " memory reserved: ", r, "memory allocated: ", a)
     
     # Initialize data loader
-    data_dir = './Dataset/samples_all'
-    data_train = AudioFaceDataset(data_dir, split='train')
-    data_test = AudioFaceDataset(data_dir, split='test')
+    data_train = AudioFaceDataset(args.data_dir, split='train')
+    data_test = AudioFaceDataset(args.data_dir, split='test')
 
-    batch_size = 128  # Specify your batch size
+    batch_size = args.batch_size  # Specify your batch size
     data_train_loader = DataLoader(dataset=data_train,
                                 batch_size=batch_size,
                                 shuffle=True,
@@ -52,11 +53,22 @@ def main():
     buffer_size = sum(b.numel() * b.element_size() for b in model.buffers())
     total_size = param_size + buffer_size
     
-    # Train the model
-    Trainer(model, data_train_loader, device)
-    
-    # Test the model
-    Tester(model, data_test_loader, device)
+    if args.mode == 'train':
+        Trainer(model, data_train_loader, device, args).train()
+        pass
+    elif args.mode == 'test':
+        Tester(model, data_test_loader, device, args).test()
+        pass
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Train/Test RDNet')
+    parser.add_argument('--mode', type=str, required=True, help='Operation mode: train or test')
+    parser.add_argument('--data_dir', type=str, default='./data', help='Directory for data')
+    parser.add_argument('--batch_size', type=int, default=32, help='Batch size for training')
+    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for training')
+    parser.add_argument('--training_epochs', type=int, default=10, help='Number of training epochs')
+    parser.add_argument('--save_model', type=str, default='./model.pth', help='Path to save the trained model', required=False)
+    parser.add_argument('--model_path', type=str, help='Path to load the model for testing', required=False)
+    args = parser.parse_args()
+
+    main(args)

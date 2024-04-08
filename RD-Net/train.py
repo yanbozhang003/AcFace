@@ -4,17 +4,18 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 
 class Trainer:
-    def __init__(self, model, data_loader, device):
+    def __init__(self, model, data_loader, device, args):
+        self.args = args
         self.model = model
         self.data_loader = data_loader
         self.device = device
         self.train_cost = []
         self.train_accu = []
 
-        self.learning_rate = 0.000001
+        self.learning_rate = args.learning_rate
         self.criterion = nn.CrossEntropyLoss()
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.learning_rate)
-        self.training_epochs = 80
+        self.training_epochs = args.training_epochs
 
     def train(self):
         total_batch = len(self.data_loader.dataset) // self.data_loader.batch_size
@@ -53,6 +54,8 @@ class Trainer:
                 avg_cost += cost.item() / total_batches
 
             print(f"[Epoch: {epoch + 1:>4}], averaged cost = {avg_cost:.9}")
+        
+        torch.save(self.model.state_dict(), self.args.save_model)
 
         print('Learning Finished!')
 
