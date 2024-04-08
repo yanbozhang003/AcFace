@@ -1,8 +1,5 @@
 function startProcessing(settings_folder, signal_folder, USER, MASK)
-    clear;
     close all;
-
-    disp settings_folder
 
     [config, setting] = z_load_config(settings_folder);
 
@@ -41,5 +38,7 @@ function startProcessing(settings_folder, signal_folder, USER, MASK)
         imagesc(mat_plt(11:end-10,11:end-10));
         colormap('jet')
     end
+
+    pause(10)
 end
 
