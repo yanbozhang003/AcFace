@@ -157,8 +157,6 @@ The definition of these two arguments is the same as they are in `model_train.sh
 
 ## Contact
 
-test
-
 zhang.yanbo@ntu.edu.sg
 
 yanbozhang03@gmail.com
