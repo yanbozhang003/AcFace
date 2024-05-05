@@ -1,6 +1,8 @@
 function startProcessing(settings_folder, signal_folder, USER, MASK)
     close all;
 
+    addpath('./functions/');
+
     [config, setting] = z_load_config(settings_folder);
 
     MASK_ALL = config.mask;
@@ -18,7 +20,7 @@ function startProcessing(settings_folder, signal_folder, USER, MASK)
     rx_trace_list = z_get_trace(USER, USER_ALL, MASK, MASK_ALL, DISTANCE_ALL, config);
 
     %% get spectrum
-    facial_spec_all = z_get_spec_final(rx_trace_list,signal_folder);
+    facial_spec_all = z_get_spec_final(rx_trace_list);
 
     %% plot spectrum
     plt_filter = fspecial('gaussian',[10,10],2);
