@@ -176,7 +176,5 @@ series = {MOBISYS '24}
 
 ## Contact
 
-zhang.yanbo@ntu.edu.sg
-
 yanbozhang03@gmail.com
 
