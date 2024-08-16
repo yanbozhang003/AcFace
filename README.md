@@ -154,6 +154,15 @@ After training completes, you can start model testing by executing the following
 The definition of these two arguments is the same as they are in `model_train.sh`. 
 
 ## Citation
+```
+@inproceedings{zhang2024face,
+  title={Face Recognition In Harsh Conditions: An Acoustic Based Approach},
+  author={Zhang, Yanbo and Tong, Panrong and Li, Songfan and Xie, Yaxiong and Li, Mo},
+  booktitle={Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services},
+  pages={1--14},
+  year={2024}
+}
+```
 
 ## Contact
 
